@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>房产投资定量分析 – 内部收益率IRR #41</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .content {
+            font-size: 16px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .original-link {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>房产投资定量分析 – 内部收益率IRR #41</h1>
+        <div class="meta">
+            <strong>发布日期:</strong> 2018-07-24 <br>
+            <strong>原文链接:</strong> <a href="http://www.oushenwenji.net/thread-41898-1-1.html?_dsign=bed2a33b" target="_blank">http://www.oushenwenji.net/thread-41898-1-1.html?_dsign=bed2a33b</a>
+        </div>
+        <div class="content">
+            <td class="t_f" id="postmessage_42378">
+<div align="left">
+<ignore_js_op>
+<img aid="364" class="zoom" file="data/attachment/forum/201807/24/114914tnes4qmqy0miyqmc.jpg" id="aimg_364" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/static/image/common/none.gif" style="max-width: 100%; height: auto; margin: 10px 0;" width="501" zoomfile="data/attachment/forum/201807/24/114914tnes4qmqy0miyqmc.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_364_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>IRR.jpg</strong> <em class="xg1">(48.85 KB, 下载次数: 299)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY0fDJiNGYzYjk5fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:49 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+<font color="black"><font face="Helvetica, sans-serif"><font size="5"> </font></font></font></div><br/>
+<div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font face="楷体"><font size="6"><font color="#ff8c00">房产投资定量分析 – 内部收益率</font></font><font size="6"><font color="#ff8c00">IRR #41</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="Helvetica, sans-serif"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="Helvetica, sans-serif"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="Helvetica, sans-serif"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">看到上面图片，外加密密麻麻的符号，有没有被吓了一大跳的朋友？哈，不必紧张，本文只讲述内部收益率IRR函数怎么使用。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">IRR</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">的原理与NPV函数息息相关，这里不讨论。感兴趣其原理的朋友，自行度娘。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">对于绝大多数投资来说，四则运算（加、减、乘、除），足矣！但了解一些基本的财务公式，还是非常有必要的。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">成本之事，生死之事；收益之事，生死之事。均不可不察！</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">yevon_ou</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">经常会说，拉一下IRR，看一下成本（或收益）。很多新群友会私聊我：内部收益率IRR，怎么拉？</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="365" class="zoom" file="data/attachment/forum/201807/24/114939fptcolffo5vvoog5.jpg" id="aimg_365" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/114939fptcolffo5vvoog5.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="194" zoomfile="data/attachment/forum/201807/24/114939fptcolffo5vvoog5.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_365_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>yundao.jpg</strong> <em class="xg1">(3.55 KB, 下载次数: 299)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY1fDgzNTFkOTIxfDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:49 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">群友们，一对一服务，很贵的！索性，我就写一篇小文讲一下IRR。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">一）IRR定义</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">内部收益</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">IRR</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">函数：它返回由数值代表的一组现金流（包含支出和收入）的内部收益率。这些现金流不必为均衡的，但作为年金，它们必须按<strong>固定的间隔</strong>产生，如按月或按年。内部收益率为投资的回收利率，其中包含<strong>定期支付（负值）</strong>和<strong>定期收入（正值）</strong>。</font></font></font></div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">大家看好定义：一定是固定间隔（按年或按月）；要有支出；要有收入。</font></font></font></div><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">二）IRR语法</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">格式：IRR(values,guess)</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">功能：返回连续期间的现金流量的内含收益率。如果我们借钱，这个值越低越好；如果我们投资算收益，这个值越高越好。我们只关心values这个参数就行了。对guess参数感兴趣的话，度娘吧。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">三）</font></font><font color="#3E3E3E"><font face="楷体">IRR</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">普通示例</font></font></font></div><div align="left"><font size="5"> </font></div><div align="left"><font size="5">如果您将下面示例的表格（不包含第1行）复制到空白excel工作表中头部，会更易于理解该示例。</font></div><div align="left"><font size="5"><br/>
+</font></div><div align="left"><font size="5"> </font></div><div align="left"><font size="5">可复制的数据如下：</font></div><table cellspacing="0" class="t_table" style="width:319px"><tbody><tr><td width="63"><br/>
+</td><td width="102"><div align="left"><div align="left"><strong><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">A</font></font></font></strong></div></div></td><td width="154"><div align="left"><div align="left"><strong><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">B</font></font></font></strong></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">序号</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">数据</font></font></font></strong></div></div></td><td width="154"><div align="right"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">说明</font></font></font></strong></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">1</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">-68,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">某项业务的初期成本费用</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">2</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">11,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第一年的净收入</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">3</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">14,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第二年的净收入</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">4</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">18,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第三年的净收入</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">5</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">22,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第四年的净收入</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">6</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">28,000</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第五年的净收入</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="102"><div align="right"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">公式</font></font></font></strong></div></div></td><td width="154"><div align="right"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">说明（结果）</font></font></font></strong></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">1</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">=IRR(B2:B4)</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">若要计算两年后的内部收益率。</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">2</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">=IRR(B2:B6)</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">投资四年后的内部收益率</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">(-2%)</font></font></font></div></div></td></tr><tr><td width="63"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">3</font></font></font></strong></div></div></td><td width="102"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">=IRR(B2:B7)</font></font></font></div></div></td><td width="154"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">五年后的内部收益率</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">(10%)</font></font></font></div></div></td></tr></tbody></table><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">特别注意：每一行都要有数据，哪怕为0。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">下面是运行结果截图：</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="366" class="zoom" file="data/attachment/forum/201807/24/115046dbi2jubz6yb1ai6y.jpg" id="aimg_366" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115046dbi2jubz6yb1ai6y.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="362" zoomfile="data/attachment/forum/201807/24/115046dbi2jubz6yb1ai6y.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_366_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>截图结果1.jpg</strong> <em class="xg1">(41.96 KB, 下载次数: 302)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY2fGU4ZDJkYmU5fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:50 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">也就是说该笔投资，平均到每年都是一直是亏钱的，一直到第5年才开始赚钱，并且合计到每年，其收益还不错。假如，这笔钱存到银行里可以赚10%的复利利息（假设有复利），就不要做这笔投资了，毕竟存银行里省心省力更安全！</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">四）银行的赚钱伎俩</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">对于很多投资，特别是房产投资，必备的一个环节就是向银行融资（借钱）。借钱时一定要警惕不要偷鸡不成反蚀把米！</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">1</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">）砍头息</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">砍头息指的是放款者借钱给借款者时，先从本金里面扣除一部分钱，但利息是按全款计算的。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">银行内部高手如云，为吸引借款者，会故意设计一些让百姓感觉便宜，但实则非常贵的品种，砍头息比较常见。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">a</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">）小白砍头息</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">有这么一款银行品种：</font></font></font></div><table cellspacing="0" class="t_table" style="width:357px"><tbody><tr><td width="72">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">详情：</font></font></font></strong></div>  </td><td width="285"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">最高50w，直接放在借记卡，1年期费率为总金额的4.5%；2年期的费率为总金额的8.5%。手续费第一个月一次性支付，每月等比例还本金。</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><strong><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">注释：</font></font></font></strong></div></div></td><td width="285"><div align="right"><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">这就是标准的砍头息。</font></font></font></div></div></td></tr></tbody></table><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">这是比较普遍的一款砍头息品种，投资小白会感觉便宜，真便宜！</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">我产分解一下：</font></font></font></div><table cellspacing="0" class="t_table" style="width:351px"><tbody><tr><td width="65">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">示例：</font></font></font></strong></div>  </td><td width="285"><div align="left"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-1-1</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">日放款500000</font></font></font></div></div></td></tr><tr><td width="65"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="285"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-2-1</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">开始扣手续费和平均本金</font></font></font></div></div></td></tr><tr><td width="65"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="285"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-3-1 </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">本金</font></font></font></div></div></td></tr><tr><td width="65"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="285"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-4-1 </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">本金</font></font></font></div></div></td></tr><tr><td width="65"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="285"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">……</font></font></font></div></div></td></tr><tr><td width="65"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="285"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">……</font></font></font></div></div></td></tr></tbody></table><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">拉一下IRR，也就是用IRR计算一下成本。很多群友对“拉”这个词心生敬畏，就是放到excel里，计算一下。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">1</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">年期（12个月）：</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><table cellspacing="0" class="t_table" style="width:174px"><tbody><tr><td width="73">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">NO.</font></font></font></strong></div>  </td><td width="101"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">金额</font></font></font></strong></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">0</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">(500000.00)</font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">1</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">64166.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">2</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">3</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">4</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">5</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">6</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">7</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">8</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">9</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">10</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">11</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="right"><font size="5">12</font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5">41666.67 </font></div></div></td></tr><tr><td width="73"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="101"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td></tr><tr><td width="73"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="101"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td></tr><tr><td width="73"><div align="left"><div align="left"><font size="5"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体">IRR</font></font></strong><strong><font style="color:rgb(62, 62, 62)"><font face="楷体">（月）</font></font></strong></font></div></div></td><td width="101"><div align="right"><div align="right"><font size="5"><strong>=IRR(B2:B14)</strong></font></div></div></td></tr><tr><td width="73"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">年化：</font></font></font></strong></div></div></td><td width="101"><div align="right"><div align="right"><font size="5"><strong>=(1+B17)^12-1</strong></font></div></div></td></tr></tbody></table><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">老规矩：复制到空白excel工作表中最左最上方的表格位置。诺，也就是下图中黄色的位置，红框中标示为A1。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="367" class="zoom" file="data/attachment/forum/201807/24/115109cbsqekvza7fooskb.jpg" id="aimg_367" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115109cbsqekvza7fooskb.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="326" zoomfile="data/attachment/forum/201807/24/115109cbsqekvza7fooskb.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_367_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>Excel A1.jpg</strong> <em class="xg1">(13.92 KB, 下载次数: 301)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY3fGFkZjZhMjY3fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:51 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">为了让大家在复制内容到EXCEL时不出错，结果都是截图（注意左边行数，如1,2,3…..18;及上面列数：如A，B）。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font>
+<ignore_js_op>
+<img aid="368" class="zoom" file="data/attachment/forum/201807/24/115131isa55bppj4zpfah5.jpg" id="aimg_368" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115131isa55bppj4zpfah5.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="213" zoomfile="data/attachment/forum/201807/24/115131isa55bppj4zpfah5.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_368_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>截图结果3.jpg</strong> <em class="xg1">(37.2 KB, 下载次数: 307)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY4fGM5MmE1MjRifDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:51 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">之所以叫小白砍头息，是因为这种砍头息猫腻较少。看完条款，马上可以速度出来。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">速算法：总利率 = 年费率*2 = 4.5%*2 = 9%。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5">家庭作业：群友们自己拉一下2年期的IRR。</font></font></font></div><div align="left"><font style="color:rgb(226, 0, 0)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font color="black"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">闲来无事，您就算一算浦发银行的万用金的成本是多少(下面表格是几年前资料)？</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><table cellspacing="0" class="t_table" style="width:416px"><tbody><tr><td width="48">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">序号</font></font></font></strong></div>  </td><td width="167"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">项目(浦发万用金）</font></font></font></strong></div></div></td><td width="201"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">具体条款</font></font></font></strong></div></div></td></tr><tr><td width="48"><div align="left"><div align="right"><font size="5">1</font></div></div></td><td width="167"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">手续费</font></font></font></div></div></td><td width="201"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">5%/</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">年</font></font></font></div></div></td></tr><tr><td width="48"><div align="left"><div align="right"><font size="5">2</font></div></div></td><td width="167"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">额度</font></font></font></div></div></td><td width="201"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">295000</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">元</font></font></font></div></div></td></tr><tr><td width="48"><div align="left"><div align="right"><font size="5">3</font></div></div></td><td width="167"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">年限</font></font></font></div></div></td><td width="201"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">3</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">年</font></font></font></div></div></td></tr><tr><td width="48"><div align="left"><div align="right"><font size="5">4</font></div></div></td><td width="167"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">还款方式</font></font></font></div></div></td><td width="201"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">前端手续费，一次性收取。<br/>
+  无利息，每月还本金。</font></font></font></div></div></td></tr></tbody></table><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="宋体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="宋体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">b) </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">稍复杂的砍头息</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">再举一个稍微复杂点儿的例子，招行e贷（的资料）。</font></font></font></div><table cellspacing="0" class="t_table" style="width:319px"><tbody><tr><td width="319">  <div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">品种：招行e贷</font></font></font></div>  </td></tr><tr><td width="319"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">总金额：144000</font></font></font></div></div></td></tr><tr><td width="319"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">前70天免费</font></font></font></div></div></td></tr><tr><td width="319"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">第3个月，第4个月只还本金12000</font></font></font></div></div></td></tr><tr><td width="319"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">从第5个月开始：还款13080（12000+1080），再还10个月</font></font></font></div></div></td></tr></tbody></table><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">这种乱花渐欲迷人眼的手法，哪怕脱离投资小白阶段，也万万不能在接电话时马上速算出实际年化费率的。这些条款设计的王八蛋，高，实在是高！</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">万变不离其宗，先分解一下：</font></font></font></div><table cellspacing="0" class="t_table" style="width:274px"><tbody><tr><td width="72">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">示例：</font></font></font></strong></div>  </td><td width="202"><div align="left"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-5-2</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">日放款144000</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="202"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-7-11 </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">还12000</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="202"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-8-11 </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">还12000</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="202"><div align="right"><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2017-9-11 </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">开始还13800</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="202"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">……</font></font></font></div></div></td></tr><tr><td width="72"><div align="left"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">　</font></font></font></div></div></td><td width="202"><div align="right"><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">……</font></font></font></div></div></td></tr></tbody></table><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">老规矩：</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><table cellspacing="0" class="t_table" style="width:112px"><tbody><tr><td width="45">  <div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">NO.</font></font></font></strong></div>  </td><td width="67"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">金额</font></font></font></strong></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">0</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">-144000</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">1</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">0</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">2</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">0</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">3</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">12000</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">4</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">12000</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">5</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">6</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">7</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">8</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">9</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">10</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">11</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">12</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">13</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="right"><font size="5">14</font></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">13080</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">IRR</font></font></font></strong></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">=IRR(B2:B16)</font></div></div></td></tr><tr><td width="45"><div align="left"><div align="left"><strong><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">年化</font></font></font></strong></div></div></td><td width="67"><div align="right"><div align="right"><font size="5">=(1+B17)^12-1</font></div></div></td></tr></tbody></table><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">运行结果截图：</font></font></font></div><br/>
+<div align="left">
+<ignore_js_op>
+<img aid="369" class="zoom" file="data/attachment/forum/201807/24/115157u73mzh2ff7v7r9j7.jpg" id="aimg_369" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115157u73mzh2ff7v7r9j7.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="213" zoomfile="data/attachment/forum/201807/24/115157u73mzh2ff7v7r9j7.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_369_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>截图结果4.jpg</strong> <em class="xg1">(34.21 KB, 下载次数: 302)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzY5fDYxY2E2Yjg4fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:51 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">心中一万个CNM，设计出这种吃人不吐骨头的产品经理，良心啊良心！</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="370" class="zoom" file="data/attachment/forum/201807/24/115225ou6elnzsye55cs93.jpg" id="aimg_370" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115225ou6elnzsye55cs93.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="419" zoomfile="data/attachment/forum/201807/24/115225ou6elnzsye55cs93.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_370_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>良心.jpg</strong> <em class="xg1">(40.25 KB, 下载次数: 302)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzcwfDIyNTRmZjY2fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:52 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">c) </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">更复杂的砍头息</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="371" class="zoom" file="data/attachment/forum/201807/24/115239e7x4mhxfrhf7j7zu.jpg" id="aimg_371" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115239e7x4mhxfrhf7j7zu.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="300" zoomfile="data/attachment/forum/201807/24/115239e7x4mhxfrhf7j7zu.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_371_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>不需要良心.jpg</strong> <em class="xg1">(27.14 KB, 下载次数: 295)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzcxfDk5NjM4ZWE5fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:52 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">再复杂，也是逃不过IRR的火眼金睛！按上面步骤按部就班做就好了。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">e) </font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">良心砍头息（注1）</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">啥，啥，啥？还有良心的砍头息。Bingo，大千世界无奇不有，精彩，精彩，精彩！</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="372" class="zoom" file="data/attachment/forum/201807/24/115255xntrtgxykj3ftfxz.jpg" id="aimg_372" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115255xntrtgxykj3ftfxz.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="600" zoomfile="data/attachment/forum/201807/24/115255xntrtgxykj3ftfxz.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_372_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>王宝强 啥啥啥.jpg</strong> <em class="xg1">(39.4 KB, 下载次数: 292)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzcyfDc2ZjU2OGU5fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:52 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">有这么一家银行叫：上海农商银行，出了这么一款宇宙良心产品，叫“</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">鑫福金”现金分期（下面是几年前的资料）：</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><table cellspacing="0" class="t_table" style="width:285px"><tbody><tr><td width="285">  <div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">1</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">年期费率是总金额的4.5%；2年期费率是总金额的8.5%。<br/>
+  手续费第一个月一次性支付。<br/>
+  每个月还本金的1%，最后一个月还剩余本金。</font></font></font></div>  </td></tr></tbody></table><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">结论：总成本在5%左右。群友们，自己算吧。</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="373" class="zoom" file="data/attachment/forum/201807/24/115308zteszay6rav2v4kt.jpg" id="aimg_373" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115308zteszay6rav2v4kt.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="419" zoomfile="data/attachment/forum/201807/24/115308zteszay6rav2v4kt.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_373_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>幸福.jpg</strong> <em class="xg1">(31.87 KB, 下载次数: 302)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MzczfGQyN2IxYTRifDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:53 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">别急，这么好的东西，有门槛。比如：需要是公务员，教师，医生护士，警察，事业编制。国企大单位，世界五百强企业。其它人等，洗洗睡吧。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="374" class="zoom" file="data/attachment/forum/201807/24/115358l661228ax6am6kma.jpg" id="aimg_374" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115358l661228ax6am6kma.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="433" zoomfile="data/attachment/forum/201807/24/115358l661228ax6am6kma.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_374_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>元宝.jpg</strong> <em class="xg1">(58.75 KB, 下载次数: 300)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=Mzc0fDVjM2Y5YjkyfDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:53 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">2</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">）欧神小密圈问题</font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="375" class="zoom" file="data/attachment/forum/201807/24/115437dgxo27exxne3g1qz.jpg" id="aimg_375" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115437dgxo27exxne3g1qz.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201807/24/115437dgxo27exxne3g1qz.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_375_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>3.jpg</strong> <em class="xg1">(308.95 KB, 下载次数: 298)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=Mzc1fGZkMmNjNWE0fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:54 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left">
+<ignore_js_op>
+<img aid="376" class="zoom" file="data/attachment/forum/201807/24/115437ghm006fq82mem2f0.jpg" id="aimg_376" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115437ghm006fq82mem2f0.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201807/24/115437ghm006fq82mem2f0.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_376_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>2.jpg</strong> <em class="xg1">(120.02 KB, 下载次数: 296)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=Mzc2fDBkZDJkNDc3fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:54 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left">
+<ignore_js_op>
+<img aid="377" class="zoom" file="data/attachment/forum/201807/24/115438i1ya03999kzzwxag.jpg" id="aimg_377" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115438i1ya03999kzzwxag.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201807/24/115438i1ya03999kzzwxag.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_377_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>1.jpg</strong> <em class="xg1">(105.53 KB, 下载次数: 293)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=Mzc3fDZkZWNhZTMxfDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:54 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">用我闺女的一句话，来说:我们来算算怎么样？（注1）</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">3</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">）其它金融产品</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">手握此等IB利器，下一步把你身边的金融产品都算一遍，然后呢？可以当大神了。</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">五）结束语</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"><br/>
+</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">IRR</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">非常实用，与投资高手的差距，就是一个IRR是不是够高（或够低）。</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left">
+<ignore_js_op>
+<img aid="378" class="zoom" file="data/attachment/forum/201807/24/115507hjhj7xww1x5okex4.jpg" id="aimg_378" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201807/24/115507hjhj7xww1x5okex4.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="354" zoomfile="data/attachment/forum/201807/24/115507hjhj7xww1x5okex4.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_378_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>大佬.jpg</strong> <em class="xg1">(45.67 KB, 下载次数: 296)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=Mzc4fGU1NjVjOTA1fDE3NjU4MDI2MjF8MHw0MTg5OA%3D%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-7-24 11:55 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</div><br/>
+<div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体">(</font></font><font style="color:rgb(62, 62, 62)"><font face="楷体">一笑加一笑， 2018年3月26日 深夜)</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font size="5"><font style="color:rgb(62, 62, 62)"><font face="楷体"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5">注1：任何一对一的服务，都很贵，您就别私信我了。群内聊，或者请访问链接：</font></font></font><a href="https://weidian.com/item/?itemID=2545421295&amp;spider_token=fb5f&amp;spider=seller.zx-shopdetail.5.2" target="_blank"><font face="微软雅黑"><font size="6"><font color="#0000ff">房产投资精算函数表格</font></font></font><font color="black"><font face="楷体"><font size="5">。</font></font></font></a></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><br/>
+<hr class="l"/><br/>
+<br/>
+<div align="left"><font color="#000"><font face="楷体, 楷体_GB2312"><font size="5">熟悉我的朋友都知道，我关心的话题只有一个：一切与普通百姓赚钱有关的事儿~</font></font></font></div><div align="left"><font color="#000"><font face="楷体, 楷体_GB2312"><font size="5"><br/>
+</font></font></font></div><div align="left"><font color="#000"><font face="楷体, 楷体_GB2312"><font size="5">如果你感兴趣，可加微信<font color="Red"><strong><font size="7">shuidi240</font></strong></font>，群内交流。</font></font></font></div><br/>
+<div align="left"><font color="#000"><font face="楷体, 楷体_GB2312"><font size="5"><br/>
+</font></font></font></div><div align="left"><font color="#000"><font face="楷体, 楷体_GB2312"><font size="5"><br/>
+</font></font></font></div><div align="left"><font style="color:rgb(62, 62, 62)"><font face="楷体"><font size="5"> </font></font></font></div><br/>
+</td>
+        </div>
+        <div class="original-link">
+            本文档由欧神文集下载器生成于 2025-12-15 20:43:44
+        </div>
+    </div>
+</body>
+</html>

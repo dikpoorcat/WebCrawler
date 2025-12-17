@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>论Arrow不可能性定理</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .content {
+            font-size: 16px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .original-link {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>论Arrow不可能性定理</h1>
+        <div class="meta">
+            <strong>发布日期:</strong> 2018-12-23 <br>
+            <strong>原文链接:</strong> <a href="http://www.oushenwenji.net/thread-42930-1-1.html?_dsign=c175a68d" target="_blank">http://www.oushenwenji.net/thread-42930-1-1.html?_dsign=c175a68d</a>
+        </div>
+        <div class="content">
+            <td class="t_f" id="postmessage_43416">
+<div align="left"><font face="楷体,楷体_GB2312"><font size="6"><font color="#0000ff"><strong>论Arrow不可能性定理</strong></font></font></font></div><br/>
+<br/>
+<br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">今天早上布尔费墨贴了一篇《<font color="#0066cc">Arrow不可能性定理：独裁是唯一完美的选举制度</font>》。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">这是从学术上证明，“自洽”的民主制度是不可能存在的。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">但是那篇逻辑文章实在很是晦涩。布尔费墨也解得不对。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">我先把全文贴在下面。然后说我的解释。</font></font></div><br/>
+<br/>
+<div align="left"><div class="quote"><blockquote><div align="left"><font face="楷体,楷体_GB2312"><font size="5"><font color="#0000ff">Arrow不可能性定理：独裁是唯一完美的选举制度</font></font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">2015-08-06  Matrix67 哲学园</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">由于某些原因，最近在整理以前的日志。偶然翻到这篇日志时，顺便在 Wikipedia 复习了一下 Arrow 不可能性定理的证明，惊奇地发现这个定理的证明过程非常困难但又非常初等，是一个门槛很低、老少咸宜的思维游戏。虽然不少人都翻译过 Wikipedia 上的这段证明，但我也想自己写一个自己的理解，一来做个笔记，二来也锻炼一下自己的表达能力。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">Arrow 不可能性定理是一个与选举制度有关的定理。选举制度，说穿了就是把所有选民的意见综合成一个全体意见的算法。选民的意见，无非是候选对象在心目中谁优谁劣，完整地反应在选票上，就是候选对象们从优到劣的一个顺序；形式最完整的全体意见，也就是候选对象的这么一个排列。因此，我们可以把整个选举制度想像成一个函数，输入 n 个排列（相当于 n 张选票），将会输出一个排列（相当于选举结果）。对输入数据的任何一处小改变，都有可能导致输出结果随之变化。作为一个合理的选举制度，它必须满足一些起码的要求。我们提出两个最基本的选举制度要求：</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">1. 如果每张选票都认为 X 比 Y 好，那么投票结果中 X 的排名也必须比 Y 更靠前；<br/>
+2. 如果每张选票中 X 、 Y 的相对排名都不改变，那么投票结果中 X 和 Y 谁先谁后也不能变。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">我们将证明，同时满足上述两个条件的选举制度只有一种，就是选举结果唯一地由其中某个选民的选票决定。也就是说，独裁是唯一一种完美的选举制度。为了简便起见，让我们假设候选人只有 A 、 B 、 C 三个人。你会发现，下面的证明过程很容易扩展到多个人的情况。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">假设每张选票都把 B 放在最后一名。也就是说，每张选票都认为， A 比 B 好， C 也比 B 好。根据条件 1 ，最终投票结果中也应该满足， A 和 C 都排在 B 前面。也就是说，投票结果里 B 也是最后一名。现在，让我们按照一定的顺序依次把每张选票里的 B 从最后一名挪到第一名的位置上去，同时不断关注在改票过程中选举结果的变化。当所有的票都改完了后，根据同样的道理，投票结果中 B 自然就排到了第一名。因此，在改票的过程中，一定存在这么一个人，改完他的选票后，投票结果中 B 的名次靠前了（从最后一名升了上来）。我们把这张选票叫做“枢纽选票”。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">接下来的证明分成四个大步骤。我们第一步要证明的就是，在改票过程中，改完这张枢纽选票，投票结果中 B 的名次将会直接从最后一名一下子升到第一名。反证，假如此时 B 没有跑到投票结果的第一名去，那么投票结果要么是 A 、 B 、 C ，要么是 C 、 B 、 A 。不妨假设是 A 、 B 、 C 吧。现在，把每张选票中 C 的名次都改到 A 前面（ C 本来就在 A 前面的那些选票就不用改了）。按照条件 1 ，最后的结果里 C 也应该跑到 A 的前面去。但同时，由于此时每张选票都把 B 列于第一名或者最后一名，调整 A 和 C 的顺序不可能影响到 B 、 A 之间的相对顺序，以及 B 、 C 之间的相对顺序，因此由条件 2 ，结果里 B 、 A 的相对排名和 B 、 C 的相对排名是不能变的。这就矛盾了：我们绝不可能在不改变 B 、 A 的相对位置以及 B 、 C 的相对位置的情况下，把投票结果 A 、 B 、 C 里 A 和 C 的位置互换。因此，把那张枢纽选票中的 B 提到第一名，一定让投票结果中的 B 也直接跑到了第一名去。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">注意，枢纽选票的产生是有前提的：它要从某个满足“每张选票里 B 都排最后”的情形开始，再按照一定的顺序把选票里的 B 都改成第一名，在此过程中才能产生对应的枢纽选票。如果具体的初始情形不一样，枢纽选票还一样吗？答案是肯定的。在第二步，我们要证明的就是，只要满足每张选票都把 B 放在最后一名（不管选票的具体内容是什么），并且按照同样的顺序进行改票，枢纽选票总会是同一张。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">这个原因很简单，关键就在于，我们总是把每张选票里的 B 从最后一名提到第一名。即使换一个不一样的初始情形，在改票过程的每一个时刻，每张选票里 B 和 A 、 B 和 C 之间的相对排名也都和原来一样，因而投票结果中 B 和 A 、 B 和 C 之间的相对排名也和原来一样。因此，投票结果里 B 的位置仍然会在同一个时候发生变化，枢纽选票还是同一张。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">在第三步里，我们要证明的是，这张枢纽选票有一个非常牛的性质：在任何情形下，它都能独裁 A 、 C 之间的相对排名。也就是说，这张枢纽选票认为 A 比 C 好，投票结果里 A 就一定比 C 好；反过来，它说 C 比 A 好，投票结果里 C 就比 A 好；并且此性质不依赖于任何前提条件，即使 B 不在各选票中的特殊位置，结论同样也成立。现在，我们就考虑任意一组选票，无妨假设其中枢纽选票里 A 比 C 靠前，我们将证明投票结果中 A 也是排在 C 前面的。证明的思路是，对各选票进行一系列不涉及 A 、 C 间相对排名的修改，从而看出投票结果里 A 在 C 前面。我们先把所有选票中的 B 都排到最后一位去，注意，这一步不会改变投票结果中 A 、 C 的先后顺序，但却让前面的结论得以适用。然后，我们把枢纽选票之前的所有票里 B 的位置都挪到最前面，由前面的结论，结果中的 B 仍然处于最后一位（因而 A 位于 B 前面）。接下来，我们把枢纽选票（它应该是 A 、 C 、 B 的顺序）改成 A 、 B 、 C ，由于这张票中 A 、 B 的相对位置没变，因此结果中 A 、 B 的相对位置也没变， A 仍然在 B 前面。接下来，我们把枢纽选票改成 B 、 A 、 C ，由前面的结论，此时结果里的 B 跑到了最前面（因而排到了 C 前面），但把枢纽选票从 A 、 B 、 C 改成 B 、 A 、 C 时并没有改变 B 和 C 的相对位置，因此刚才的投票结果中 B 也应该在 C 的前面。也就是说，枢纽选票是 A 、 B 、 C 时，投票结果里 A 在 B 前， B 在 C 前，也就是说 A 排在 C 前面。但上述所有修改都不会改变任何一张选票里 A 、 C 的相对排名，因此投票结果中 A 其实自始至终都在 C 前面。这就证明了，投票结果里 A 、 C 的相对排名完全取决于这张枢纽选票，不管其它选票是什么样的。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">最后一步证明就是，这张选票不但独裁了 A 、 C 的相对排名，它直接独裁了所有人的排名。原因很简单：按照之前的推理，还会有一张独裁 A 、 B 相对排名的选票，另外还有一张独裁 B 、 C 相对排名的选票；但一山不容二虎，这三个独裁者只能是同一个人，否则一个人说左一个人说右，就会立即产生矛盾。具体地说，首先，这三个独裁者肯定不可能是三个不同的人，否则 A 、 B 的独裁者说 A 比 B 好， B 、 C 的独裁者说 B 比 C 好， A 、 C 的独裁者说 C 比 A 好，投票结果就得同时满足 A 在 B 前、 B 在 C 前、 C 在 A 前，这是不可能的。这三个独裁者也不可能是两个人。比方说其中一人同时独裁了 A 、 B 和 A 、 C ，另一人则只独裁 B 、 C ，那么如果前者说 B 在 A 前面， A 在 C 前面，后者又说 C 在 B 前面，同样不会有兼顾两者的投票结果。因此，独裁者只能有一个，它就是填写枢纽选票的那个人。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">至此，我们就证明了，满足那两个基本条件的选举制度只有一种——独裁制度。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">上述结论有另外一种等价的表述方法：同时满足全体一致性、无关候选人独立性（就是那两个基本条件）以及非独裁性这三个条件的选举制度理论上是不存在的。这就是美国经济学家 Kenneth Arrow 提出的 Arrow 不可能性定理：不存在完美的选举制度。</font></font></div></blockquote></div><br/>
+</div><br/>
+<br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">文章很长。但是和我们的直觉不符。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">文章说，ABC三个人，无法通过选票确定优劣。但我们知道的是，如果市面上有三种洗发水。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">1000个消费者走进Walmart超市，半小时以后出来。他们是有明显的胜负的。消费者通过用手里的钞票投票，是可以明显地看出市场占有份额No.1，2，3</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">那么，诡辩的逻辑漏洞是哪段呢。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">是这段：</font></font></div><div align="left"><div class="quote"><blockquote><font face="楷体,楷体_GB2312"><font size="5">现在，把每张选票中 C 的名次都改到 A 前面（ C 本来就在 A 前面的那些选票就不用改了）。按照条件 1 ，最后的结果里 C 也应该跑到 A 的前面去。但同时，由于此时每张选票都把 B 列于第一名或者最后一名，调整 A 和 C 的顺序不可能影响到 B 、 A 之间的相对顺序，以及 B 、 C 之间的相对顺序，</font></font></blockquote></div><br/>
+</div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">他这里偷换了一个概念。即“选举的胜组”。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">选举怎样才可以胜利？一般而言，常见至少有二种方法。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">一种是“排序打分法”。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">譬如一张选票上填着J,K,A,D,F。则第一名J先生得9分，第二名K得7分。第三名5分，3分，1分。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">这样的话，把N张选票叠加。就可以得出A-Z几十个候选人的总得分。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">这样的选举，比较适合基层党组选举。可以一次性选十几个人，而且评分比较具有综合性。</font></font></div><br/>
+<br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">另一种是“首位选举法”。也就是只统计第一名。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">譬如这张J,K,A,D,F。我们只说J先生获得了一票。后面的老二老三不统计。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">N张选票累加，就可以知道奥巴马拿了几票，麦凯恩拿了几票。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">这样的选举，适合于选总统。</font></font></div><br/>
+<br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">回到“Arrow不可能定理”，对于这二种选举方法，他说的“A和C互换，不影响B的排名”这句话都不成立。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">所以他在诡辩。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">那么，Arrow他其实说的是什么呢。他说的是另外一种选举方法。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">方法三：“如果A&gt;B，要比B&gt;A的次数多。那么最后全国总排名，A应该在B前面”。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">问题是，这句话听上去很有正义感，可是实际上却是不可行的。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">请看下图:</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">在这十张选票里面。C在A前面四次，A在C前面六次。所以Arrow断定A&gt;C</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">可是，同样道理，我们也可以得出：</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">A &gt; C</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">C &gt; B</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">B &gt; A</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">那么，在“全国总排名”中，这事是没法排的。陷入了循环论证。所以全世界没有一个国家是采用“选举规则三”，我拍在你前面总分就一定在你前面的。</font></font></div><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">这也是民主理论学上著名的“不可最佳论”。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">意思就是，民主选举，若最终是二个人的对决。譬如竞选美国总统。</font></font></div><div align="left"><font face="楷体,楷体_GB2312"><font size="5">在“二个人的对决”中，往往会出现A能赢B，B能赢C，C能赢A的怪圈。</font></font></div><br/>
+<br/>
+<font size="5"><font face="楷体,楷体_GB2312">那么派谁上场，用怎样的竞争策略。就有很大的关系。任何一个人退出，都将影响到选举结果：</font></font><br/>
+<br/>
+<font size="5"><font face="楷体,楷体_GB2312">(B退出竞选后，A反败为胜成为冠军)<br/>
+</font><br/>
+</font><font size="5"><font face="楷体,楷体_GB2312">那么，美国总统的结果，究竟是由三万万选民决定，还是由B一个人决定的呢？这就失去了大义的名分。<br/>
+</font><br/>
+<font face="楷体,楷体_GB2312"><font size="5">理论界对此的维护，和我之前“论儒·法·禅宗·自治和道教”那篇说的一样。</font></font></font><br/>
+<div align="left"><font face="楷体,楷体_GB2312"><font size="5">理论界堂而皇之地回答，谁决定的不重要。选出来的总统是否最优秀的，也不重要。只要全体国民同意，这样选总统是“无可争议”的即可。</font></font></div><br/>
+</td>
+        </div>
+        <div class="original-link">
+            本文档由欧神文集下载器生成于 2025-12-15 17:29:37
+        </div>
+    </div>
+</body>
+</html>

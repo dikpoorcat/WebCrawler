@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>一些基础财务函数 #2370</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .content {
+            font-size: 16px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .original-link {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>一些基础财务函数 #2370</h1>
+        <div class="meta">
+            <strong>发布日期:</strong> 2018-08-18 <br>
+            <strong>原文链接:</strong> <a href="http://www.oushenwenji.net/thread-42373-1-1.html?_dsign=17b6d0a0" target="_blank">http://www.oushenwenji.net/thread-42373-1-1.html?_dsign=17b6d0a0</a>
+        </div>
+        <div class="content">
+            <td class="t_f" id="postmessage_42853">
+<font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2394" class="zoom" file="data/attachment/forum/201808/19/093515apyujj0iitsrutfi.jpg" id="aimg_2394" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093515apyujj0iitsrutfi.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201808/19/093515apyujj0iitsrutfi.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2394_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 01.jpg</strong> <em class="xg1">(17.39 KB, 下载次数: 230)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5NHw3OWM0NGJmNXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><strong><font size="6"><font color="sienna">一些基础财务函数 <font size="3">#2370</font></font></font></strong><br/>
+<br/>
+基础知识<br/>
+<br/>
+一）月供pmt<br/>
+<br/>
+等额本息月供应该是多少。<br/>
+网络上立刻有无数无数人，打开所谓的“搜房网房贷计算器”。<br/>
+<br/>
+你这样小白，一辈子没有出息。<br/>
+月供的正确方式，应该是打开Excel。<br/>
+<br/>
+输入： pmt (利率，期数，金额)<br/>
+其中，第一个参数“利率”，指的是月利率。<br/>
+一般是4.9% * 90% / 12</font></font><br/>
+<ul><li><font face="楷体,楷体_GB2312"><font size="5">国家基准利率4.9%</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">九折优惠</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">除十二个月</font></font><br/>
+</li></ul><font face="楷体,楷体_GB2312"><font size="5"><br/>
+第二个参数，“期数”。</font></font><br/>
+<ul><li><font face="楷体,楷体_GB2312"><font size="5">如果贷款十年，就输120</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">贷款二十年，输入240</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">贷款三十年，输入360</font></font><br/>
+</li></ul><font face="楷体,楷体_GB2312"><font size="5"><br/>
+最后一个是贷款金额。<br/>
+<br/>
+举例来说，贷款100W元，月供：<br/>
+=pmt( 4.9%*90%/12,360,1000000)<br/>
+=5013.52元<br/>
+<br/>
+一般而言，我们有一个“速算数”。</font></font><br/>
+<ul><li><font face="楷体,楷体_GB2312"><font size="5">30年期是5</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">20年期是6.2</font></font></li><li><font face="楷体,楷体_GB2312"><font size="5">10年期是10</font></font><br/>
+</li></ul><font face="楷体,楷体_GB2312"><font size="5"><br/>
+好比有人说，他月供2W。<br/>
+那我们立刻可以推算出。他的贷款是400W。<br/>
+因为每10000元月供50元，所以2W对应的就是400W。<br/>
+<br/>
+同样道理，如果你从银行贷一笔350W的“抵押贷款”出来。<br/>
+则你的月供就是1.1%<br/>
+38000元左右。<br/>
+<br/>
+还有人问，“那么等额本金应该如何计算”。<br/>
+对不起，我们不和傻瓜说话。<br/>
+<br/>
+二）实际支付利息<br/>
+<br/>
+不管你用的是哪一种贷款方案。实际支付利息是不变的。<br/>
+<br/>
+取出你的对账单，用“贷款剩余金额”乘以“当前利率”即可。</font></font><br/>
+<font face="楷体"><font size="5">
+<ignore_js_op>
+<img aid="2393" class="zoom" file="data/attachment/forum/201808/19/093515la44i4zv3kk54kmg.jpg" id="aimg_2393" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093515la44i4zv3kk54kmg.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201808/19/093515la44i4zv3kk54kmg.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2393_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 02.jpg</strong> <em class="xg1">(36.41 KB, 下载次数: 241)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5M3w0ZDZiN2JlMnwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5">例如这个例子中：<br/>
+581869.58 * 3.43% / 12 = 1663.18元。完全符合。<br/>
+<br/>
+三）加权利率<br/>
+<br/>
+假设一个人名下有很多笔贷款。则你应该列一个如下图般的表格；</font></font><br/>
+<font face="楷体"><font size="5">
+<ignore_js_op>
+<img aid="2392" class="zoom" file="data/attachment/forum/201808/19/093514cp27hh2v8qvllv62.jpg" id="aimg_2392" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093514cp27hh2v8qvllv62.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="596" zoomfile="data/attachment/forum/201808/19/093514cp27hh2v8qvllv62.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2392_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 03.jpg</strong> <em class="xg1">(35.57 KB, 下载次数: 230)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5MnxkYzlhNDFiYXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><br/>
+可见，他为了458W资金成本，每个月支付了22513元利息。<br/>
+<br/>
+因此我们可以算出他的“加权资金成本”。<br/>
+22513.18 * 12 / 4581870 = 5.90%<br/>
+<br/>
+四）总月供<br/>
+<br/>
+总月供和总利息不是一回事。一般来说，月供要比利息高一倍都不止。<br/>
+其中一半是利息，一半是本金。<br/>
+<br/>
+对于月供，借银行大家一般是没有歧义的。直接用PMT计算即可。<br/>
+信用卡融资，我们默认为不还本的。<br/>
+私人借款，介于不还本和还本之间。老同学的私房钱一般是永续债。<br/>
+<br/>
+如上表。私人借款我们默认为12个月后减少一半。</font></font><br/>
+<font face="楷体"><font size="5">
+<ignore_js_op>
+<img aid="2391" class="zoom" file="data/attachment/forum/201808/19/093513joeeowq7uoi5uziq.jpg" id="aimg_2391" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093513joeeowq7uoi5uziq.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="596" zoomfile="data/attachment/forum/201808/19/093513joeeowq7uoi5uziq.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2391_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 04.jpg</strong> <em class="xg1">(33.83 KB, 下载次数: 245)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5MXw0NzIzYzlmNXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><br/>
+可见，每月要筹措资金57883，其中22513是利息，三万多是本金。<br/>
+<br/>
+五）平均贷款年限<br/>
+<br/>
+知道了“平均利率”“总月供”，才可以计算“平均贷款年限”。<br/>
+<br/>
+公式是：NPER (利率，月供，借款金额)<br/>
+<br/>
+如上例，他的“平均贷款年限”是 NPER(5.9%/12，57883，4581870)<br/>
+答案是100.5个月。<br/>
+八年半多点。<br/>
+<br/>
+<i>也就是这个人的财务结构。<br/>
+和借你一笔458W，67个月，5.9%的利率，等额本息贷款。<br/>
+二者是完全等价的。</i><br/>
+<br/>
+基本上每一个多军，都应该算一下自己的“平均借款利率”，“总月供”。<br/>
+然后再算算自己的“平均借款年限”。<br/>
+<br/>
+这是一个很重要的数字。如果不出意外，绝大多数的（6套以上）多军，该数字都应该在“8年”附近。<br/>
+而且这个数字，还在以每年“-1”的速度。在飞快递减。<br/>
+<br/>
+也就是说我们的贷款是高度“劣质化”的。<br/>
+这个数字越高越好。借银行千难万难。<br/>
+<br/>
+六）月供的难题<br/>
+<br/>
+我们整天被月供折磨得死去活来。<br/>
+<br/>
+虽然《<a href="http://oushenwenji.net/forum.php?mod=viewthread&amp;tid=42364&amp;highlight=2080" target="_blank">长线负债率</a>》，多军的负债率普遍不超过25%<br/>
+可即使如此低的负债率，依然压迫得我们喘不过气来。<br/>
+每个月的大还款日，都是一剧鬼故事。<br/>
+<br/>
+<font color="red">其核心原因，并不是我们借得太多。<br/>
+而是还款年限太短。</font><br/>
+<br/>
+我一直渴望中国能推出西方国家类似的“合并账户借款”。<br/>
+从2004年开始做这个梦，做了十几年，反而遥遥无期。<br/>
+<br/>
+所谓“合并账户借款”。是指银行给你一个借款户口。<br/>
+然后他把你“<font color="red">所有债务</font>”合并起来。<br/>
+无论是银行房贷，消费抵押，信用卡，甚至个人借款。都合并起来。<br/>
+<br/>
+银行给你批一笔3000W元的总贷款。<br/>
+其用途非常之明确，就是给你“清贷款”。<br/>
+直接划拨，打帐到你指定的贷款账户，把你街数卡数全部清掉。<br/>
+<br/>
+整合成一笔3000W元的整数，借款三十年，八折利率。每个月付一次按揭。<br/>
+这样的贷款，名义上没有任何变化。<br/>
+但实质却是天差地远。<br/>
+<br/>
+他其实是把你一篮子“劣质化”的贷款。整合成了一笔“30年八折”的优质按揭贷。<br/>
+对于这样的金融产品，简直做梦也要流口水。<br/>
+<br/>
+此类的产品，在香港市场早已烂大街。天天电视轰炸“AE邦民财富”。<br/>
+可是国内就是没有。<br/>
+等了十几年，越发遥遥无期。<br/>
+<br/>
+七）还清贷款<br/>
+<br/>
+你需要多少年才可以彻底还清贷款？<br/>
+<br/>
+把NPER中的“月供”，再加一点。譬如再加二万、三万你的“工薪收入”。</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5">例如NPER（5.9%/12，57883+30000，4581870）= 60.4<br/>
+这样你只需要五年时间，就可以彻底还清债务。<br/>
+<br/>
+你可以自己尝试一下，在NPER函数中，通过输入<br/>
+NPER（利率，总月供，总负债）<br/>
+NPER（利率，总月供+20000，总负债）<br/>
+NPER（利率，总月供+50000，总负债）<br/>
+来享受一下“早日还清”的幻想。<br/>
+<br/>
+当然，真正的多军，都是追求NPER显示结果：FALSE的。呵呵<br/>
+<br/>
+八）短期债务比例<br/>
+<br/>
+信用卡和私人借款属于“短期借款”。<br/>
+<br/>
+短期借款比例越低越好。如本例中是10.9%<br/>
+一般要低于10%<br/>
+高于20%会出问题。<br/>
+<br/>
+你要尽量用“中长期银行贷款”替换掉短期借款。<br/>
+优化债务结构。<br/>
+并降低融资成本。一般每年“融资成本”降低0.5%是老派多军追求的目标。<br/>
+<br/>
+九）自住房比例和空置房比例<br/>
+<br/>
+RT<br/>
+小学二年级数学题。<br/>
+<br/>
+十）IRR<br/>
+<br/>
+IRR是算“不确定现金流的回报率”。<br/>
+好比有一笔投资，第一个月赚2W，第二个月亏3W，第三个月赚4W，第四个月亏5W………<br/>
+<br/>
+IRR最好的用处是：“算保险费”。<br/>
+揭穿保险公司的条款，非常有用。<br/>
+<br/>
+例如水库论坛上有一篇《新华人寿 金彩一生》的保险分析文章。</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2390" class="zoom" file="data/attachment/forum/201808/19/093513jmrooxwzvmziemgo.jpg" id="aimg_2390" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093513jmrooxwzvmziemgo.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201808/19/093513jmrooxwzvmziemgo.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2390_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 05.jpg</strong> <em class="xg1">(30.5 KB, 下载次数: 247)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5MHxlMWZiZjA2NXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<br/>
+<font face="楷体"><font size="5">
+<ignore_js_op>
+<img aid="2389" class="zoom" file="data/attachment/forum/201808/19/093512gfpkx57ytwyayyx5.jpg" id="aimg_2389" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/093512gfpkx57ytwyayyx5.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201808/19/093512gfpkx57ytwyayyx5.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2389_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 06.jpg</strong> <em class="xg1">(103.5 KB, 下载次数: 245)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM4OXw4ODdlNGZlMnwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:35 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><br/>
+<font face="楷体,楷体_GB2312"><font size="5">人生三大关键，教育，工作，养老，全都给你想到了。你看，是不是一张保单保一生。<br/>
+而这样的保险产品呢。我们用IRR拉一下，回报大概是4.88%<br/>
+<br/>
+IRR的用法如下：</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2398" class="zoom" file="data/attachment/forum/201808/19/094551dk6vqeeceuvdo226.jpg" id="aimg_2398" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/094551dk6vqeeceuvdo226.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="592" zoomfile="data/attachment/forum/201808/19/094551dk6vqeeceuvdo226.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2398_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 07.jpg</strong> <em class="xg1">(72.7 KB, 下载次数: 235)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5OHxjNzNiMjQyYXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:45 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font></font></font></font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2397" class="zoom" file="data/attachment/forum/201808/19/094550qllbbtzftfyzbuwb.jpg" id="aimg_2397" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/094550qllbbtzftfyzbuwb.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="592" zoomfile="data/attachment/forum/201808/19/094550qllbbtzftfyzbuwb.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2397_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 08.jpg</strong> <em class="xg1">(68.54 KB, 下载次数: 237)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5N3w2MDkwM2NhMXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:45 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font></font></font></font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2400" class="zoom" file="data/attachment/forum/201808/19/095030ma88cpqlapc17qrc.jpg" id="aimg_2400" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/095030ma88cpqlapc17qrc.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="592" zoomfile="data/attachment/forum/201808/19/095030ma88cpqlapc17qrc.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2400_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 09.jpg</strong> <em class="xg1">(61.3 KB, 下载次数: 232)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjQwMHw2YTA0YWU1NXwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:50 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+</font></font></font></font></font></font></font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5"><font face="楷体,楷体_GB2312"><font size="5">
+<ignore_js_op>
+<img aid="2399" class="zoom" file="data/attachment/forum/201808/19/095027vo01l720e80s5s2t.jpg" id="aimg_2399" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/19/095027vo01l720e80s5s2t.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="592" zoomfile="data/attachment/forum/201808/19/095027vo01l720e80s5s2t.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_2399_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>一些基础财务函数 #2370 10.jpg</strong> <em class="xg1">(68.4 KB, 下载次数: 241)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MjM5OXxiYTIxNWU1YnwxNzY1Nzg5Mzg2fDB8NDIzNzM%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-19 09:50 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+<br/>
+<font face="楷体,楷体_GB2312"><font size="5"><br/>
+其中，每一行代表当年的“现金流”变化。<br/>
+但是每一行都要，哪怕空白，也不能漏掉。<br/>
+<br/>
+到了末尾，用IRR (D1<img alt="" border="0" smilieid="3" src="http://www.oushenwenji.net/static/image/smiley/default/biggrin.gif" style="max-width: 100%; height: auto; margin: 10px 0;"/>81)拉一下，就有了结果。<br/>
+在我们之前《<a href="http://oushenwenji.net/forum.php?mod=viewthread&amp;tid=42241&amp;highlight=2330" target="_blank">截断和再抵押</a>》，也有IRR的应用实例。<br/>
+<br/>
+有几个朋友说，自从知道IRR后，世界变得开眼晴朗。<br/>
+立刻把身边的金融产品，全部用IRR算了一遍。看看哪些是好东西，哪些西贝货。<br/>
+<br/>
+<font size="2">（</font></font></font><a href="mailto:yevon_ou@163.com" target="_blank"><font face="楷体,楷体_GB2312"><font size="2">yevon_ou@163.com</font></font></a><font face="楷体,楷体_GB2312"><font size="2">，2016年8月21日午）</font></font></font></font></font></font></font></font><br/>
+</font></font><br/>
+<font face="楷体,楷体_GB2312"><font size="5"><hr class="l"/><br/>
+<img alt="" border="0" class="zoom" id="aimg_vuqOw" onclick="zoom(this, this.src, 0, 0, 0)" onload="thumbImg(this)" onmouseover="img_onmouseoverfunc(this)" src="http://oushenwenji.net/data/attachment/forum/201808/18/105120z7ye4q87e04u8xlq.jpg" style="max-width: 100%; height: auto; margin: 10px 0;"/><br/>
+</font></font></td>
+        </div>
+        <div class="original-link">
+            本文档由欧神文集下载器生成于 2025-12-15 17:03:09
+        </div>
+    </div>
+</body>
+</html>

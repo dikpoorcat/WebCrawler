@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>【随笔】再抵押精算法</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        .meta {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .content {
+            font-size: 16px;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        .content p {
+            margin-bottom: 15px;
+        }
+        .original-link {
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>【随笔】再抵押精算法</h1>
+        <div class="meta">
+            <strong>发布日期:</strong> 2018-08-13 <br>
+            <strong>原文链接:</strong> <a href="http://www.oushenwenji.net/thread-42240-1-1.html?_dsign=7ebb2cc6" target="_blank">http://www.oushenwenji.net/thread-42240-1-1.html?_dsign=7ebb2cc6</a>
+        </div>
+        <div class="content">
+            <td class="t_f" id="postmessage_42720">
+<font size="6"><font color="#8db3e2"><strong>【</strong><strong>随笔】再抵押精算法<br/>
+</strong></font></font><font face="楷体, 楷体_GB2312"><br/>
+</font><font face="楷体, 楷体_GB2312"><font size="4">一套价值100W的房子，贷款70W，七折利率4.585%</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">现在房价升值了，譬如升到二三百万了。想把旧贷款还掉，重新做抵押贷款借出来。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">请问盈亏平衡点在哪里，一般速算法如何。</font></font><br/>
+<br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">答：1）首先，我们假设抵押贷款，能做到的条款是：1.2倍利率，1%的手续费。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">这样，1.2倍利率=7.86%</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">一般抵押贷款都是借10年的。从高到低，平均只借了5年。1%的手续费要在五年中分摊，每年0.2%。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">则实际成本8.06%</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">2）如果你借了X万出来。你实际获得的现金，仅只有：0.99X-70</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">即99%的贷款金额，再冲掉原有的70W贷款。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">为了获得这一部分资金，你支付的利息是：X * 8.06% - 70 * 4.585%</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">即全部贷款都要付8.06%利率。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">这部分“新增”资金的实际利率是：（0.0806X- 3.2095) ÷ （0.99X-70）</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">如果融资成本以9%为上限的话，则X=363.6</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">如果融资成本以10%为上限的话，则X=206</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">3）我们可以得到如上这张图片。</font></font><br/>
+<ignore_js_op>
+<img aid="1861" class="zoom" file="data/attachment/forum/201808/13/215850ph10sj8hi4v6vmiz.jpg" id="aimg_1861" inpost="1" onclick="zoom(this, this.src, 0, 0, 0)" src="http://www.oushenwenji.net/data/attachment/forum/201808/13/215850ph10sj8hi4v6vmiz.jpg" style="max-width: 100%; height: auto; margin: 10px 0;" width="640" zoomfile="data/attachment/forum/201808/13/215850ph10sj8hi4v6vmiz.jpg"/>
+<div class="tip tip_4 aimg_tip" disautofocus="true" id="aimg_1861_menu" style="position: absolute; display: none">
+<div class="xs0">
+<p><strong>再抵押精算法.jpg</strong> <em class="xg1">(34.33 KB, 下载次数: 166)</em></p>
+<p>
+<a href="forum.php?mod=attachment&amp;aid=MTg2MXwyMWUwYjg2MXwxNzY1NzkzOTIzfDB8NDIyNDA%3D&amp;nothumb=yes" target="_blank">下载附件</a>
+</p>
+<p class="xg1 y">2018-8-13 21:58 上传</p>
+</div>
+<div class="tip_horn"></div>
+</div>
+</ignore_js_op>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<table cellspacing="0" class="t_table" style="width:148px"><tbody><tr><td width="72">贷款金额</td><td width="76">增量利率</td></tr><tr><td>70</td><td>-347.50%</td></tr><tr><td>75</td><td>66.72%</td></tr><tr><td>80</td><td>35.20%</td></tr><tr><td>85</td><td>25.73%</td></tr><tr><td>90</td><td>21.18%</td></tr><tr><td>95</td><td>18.49%</td></tr><tr><td>100</td><td>16.73%</td></tr><tr><td>105</td><td>15.47%</td></tr><tr><td>110</td><td>14.54%</td></tr><tr><td>115</td><td>13.82%</td></tr><tr><td>120</td><td>13.24%</td></tr><tr><td>125</td><td>12.77%</td></tr><tr><td>130</td><td>12.38%</td></tr><tr><td>135</td><td>12.05%</td></tr><tr><td>140</td><td>11.77%</td></tr><tr><td>145</td><td>11.53%</td></tr><tr><td>150</td><td>11.31%</td></tr><tr><td>155</td><td>11.12%</td></tr><tr><td>160</td><td>10.96%</td></tr><tr><td>165</td><td>10.81%</td></tr><tr><td>170</td><td>10.67%</td></tr><tr><td>175</td><td>10.55%</td></tr><tr><td>180</td><td>10.44%</td></tr><tr><td>185</td><td>10.34%</td></tr><tr><td>190</td><td>10.25%</td></tr><tr><td>195</td><td>10.16%</td></tr><tr><td>200</td><td>10.09%</td></tr><tr><td>205</td><td>10.01%</td></tr><tr><td>210</td><td>9.95%</td></tr><tr><td>215</td><td>9.88%</td></tr><tr><td>220</td><td>9.83%</td></tr><tr><td>225</td><td>9.77%</td></tr><tr><td>230</td><td>9.72%</td></tr><tr><td>235</td><td>9.67%</td></tr><tr><td>240</td><td>9.63%</td></tr><tr><td>245</td><td>9.58%</td></tr><tr><td>250</td><td>9.54%</td></tr><tr><td>255</td><td>9.51%</td></tr><tr><td>260</td><td>9.47%</td></tr><tr><td>265</td><td>9.44%</td></tr><tr><td>270</td><td>9.40%</td></tr><tr><td>275</td><td>9.37%</td></tr><tr><td>280</td><td>9.34%</td></tr><tr><td>285</td><td>9.31%</td></tr><tr><td>290</td><td>9.29%</td></tr><tr><td>295</td><td>9.26%</td></tr><tr><td>300</td><td>9.24%</td></tr><tr><td>305</td><td>9.21%</td></tr><tr><td>310</td><td>9.19%</td></tr><tr><td>315</td><td>9.17%</td></tr><tr><td>320</td><td>9.15%</td></tr><tr><td>325</td><td>9.13%</td></tr><tr><td>330</td><td>9.11%</td></tr><tr><td>335</td><td>9.09%</td></tr><tr><td>340</td><td>9.08%</td></tr><tr><td>345</td><td>9.06%</td></tr><tr><td>350</td><td>9.04%</td></tr><tr><td>355</td><td>9.03%</td></tr><tr><td>360</td><td>9.01%</td></tr><tr><td>365</td><td>9.00%</td></tr><tr><td>370</td><td>8.98%</td></tr><tr><td>375</td><td>8.97%</td></tr><tr><td>380</td><td>8.95%</td></tr><tr><td>385</td><td>8.94%</td></tr><tr><td>390</td><td>8.93%</td></tr><tr><td>395</td><td>8.92%</td></tr><tr><td>400</td><td>8.91%</td></tr></tbody></table><br/>
+<br/>
+<br/>
+<font face="楷体_GB2312"><font size="4">可见，一般“加抵押”贷款，你的实际利率维持在9~10%之间。下限在8.9%之上。<br/>
+而你的实际贷款，X可以获得多少呢。<br/>
+<br/>
+答案是十分悲观的。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4"><br/>
+你根本做不到206W，更做不到363W，你很难把贷款金额放大到原先的三倍。说句打击人的话，甚至连2倍都放不到。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">一般而言，X=140W~160W，也就是说，你的实际资金成本，要达到11%。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">这里面主要的瓶颈，在于银行。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">没有实战过的人，很难理解。目前的抵押贷款成数，大约仅为45%。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">没错，是四成半。300W的房子，只能贷出135W。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">银行普适的政策，是抵押贷款贷六成。但在实际操作中，除了部分CEO成本高昂盘，绝大多数的房子估不足。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">估不足，银行给你的估价，极其保守。一般也就是买卖价的70%。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">然后银行再在70%估价的基础上，给你贷六成。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">也就是说，实际能借给你的，只有42%。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">虽然这个数字有点高高低低。但实战操作中，一般我们就按45%来作速算估算。</font></font><br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">在四成五的基础上，如果你要X=140W，你的房子就要由100W至少涨到300W，300*45%=135W</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">如果你想X=160W，则你的房子，至少要涨三倍半。涨到350W的数量级。</font></font><br/>
+<br/>
+<br/>
+简单点记忆：<br/>
+<strong><font size="4"><font color="blue">新贷款÷老贷款，至少要3倍才可以做,最好要4倍!</font></font></strong><br/>
+<br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4">对于绝大多数的房子，尤其是2009年之后买的房子，其实并不能够达到这样的涨幅。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">也就是说，目前操作“加按揭”是不划算的。</font></font><br/>
+<font face="楷体, 楷体_GB2312"><font size="4">你的实际资金成本，将达到11%以上。</font></font><br/>
+<br/>
+<br/>
+<font face="楷体, 楷体_GB2312"><font size="4"><font size="2">（</font><a href="mailto:yevon_ou@yahoo.com" target="_blank"><font size="2"><font color="#0066cc">yevon_ou@yahoo.com</font></font></a><font size="2">，2013年8月28日晚）</font></font></font><br/>
+<font face="楷体"><font size="4"><hr class="l"/></font></font><br/>
+<font face="楷体"><font size="5"><font color="#ff0000">很多朋友对房产代持和合伙购房的细节，总是了解的不系统，这里有一个实战模板。如果咨询也可以，时间需要1个多小时。详情，请扫二维码：</font></font></font><br/>
+<font face="楷体"><font size="5"><font color="#ff0000"><img alt="" border="0" class="zoom" height="240" id="aimg_iboJu" onclick="zoom(this, this.src, 0, 0, 0)" src="http://oushenwenji.net/data/attachment/forum/201807/20/175125g7oskeowwgwm6qhq.png" style="max-width: 100%; height: auto; margin: 10px 0;" width="240"/></font></font></font><br/>
+</td>
+        </div>
+        <div class="original-link">
+            本文档由欧神文集下载器生成于 2025-12-15 18:18:45
+        </div>
+    </div>
+</body>
+</html>
